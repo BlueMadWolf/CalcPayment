@@ -11,28 +11,35 @@ double refund_for_missed_training;
 
 
 //Человек
-struct human
+class human
 {
     //Имя
-    std::string name;
+    std::string _name;
     //Фамилия
-    std::string full_name;
+    std::string _full_name;
 
     //Количество пропущенных занятий
-    int count_missed;
+    int _count_missed;
+
+public:
+	human(std::string name, std::string full_name, int count_missed) :
+		_name(name), _full_name(full_name), _count_missed(count_missed) {}
 
 	//Сумма к оплате за месяц
 	double amount_payable_for_month()
 	{
-		return payment_for_month - (refund_for_missed_training * count_missed);
+		return payment_for_month - (refund_for_missed_training * _count_missed);
 	}
 };
 
 //Месяц тренировок
-struct month_of_training
+class month_of_training
 {
+public:
     std::vector<human> humans;
 	
+
+
 };
 
 
