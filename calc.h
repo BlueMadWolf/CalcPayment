@@ -45,10 +45,13 @@ enum Month{Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
 class month_of_training
 {
 	//Название месяца
-	Month name;
+	Month _name;
+
+	//список людей
+	std::vector<human> _humans;
 public:
-    std::vector<human> humans;
-	
+	//конструктор
+	month_of_training(Month name = Jan) : _name(name) {}
 
 
 };
