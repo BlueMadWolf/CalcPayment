@@ -38,9 +38,14 @@ public:
 	std::string full_name() const { return _full_name; }
 };
 
+//месяца
+enum Month{Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};
+
 //Месяц тренировок
 class month_of_training
 {
+	//Название месяца
+	Month name;
 public:
     std::vector<human> humans;
 	
