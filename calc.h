@@ -30,6 +30,12 @@ public:
 	{
 		return payment_for_month - (refund_for_missed_training * _count_missed);
 	}
+
+	//Имя
+	std::string name() const { return _name; }
+
+	//Фамилия
+	std::string full_name() const { return _full_name; }
 };
 
 //Месяц тренировок
